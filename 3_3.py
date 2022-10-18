@@ -7,11 +7,13 @@
 my_list = [1.1, 1.2, 3.1, 5, 10.01]
 # my_list = list(map(float, input("Введите числа в строку через пробел: ").split()))
 
-res_list = []
-for i in my_list:
-    if i % 1 > 0:
-        num = round((i % 1), 2)
-        res_list.append(num)
+# res_list = []
+# for i in my_list:
+#     if i % 1 > 0:
+#         num = round((i % 1), 2)
+#         res_list.append(num)
+
+res_list = [i%1 for i in my_list if i % 1 > 0]
 
 result = round((max(res_list) - min(res_list)), 2)
 
